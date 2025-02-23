@@ -1,0 +1,16 @@
+.customnavbar {
+    background-color: #4CAF50;
+    /* Replace with your desired color */
+}
+
+.customnavbar .nav-link,
+.customnavbar .navbar-brand {
+    color: #FFF;
+    /* Replace with your desired text color */
+}
+
+.customnavbar .nav-link:hover,
+.customnavbar .navbar-brand:hover {
+    color: #FFF;
+    /* Replace with your desired hover text color */
+}
