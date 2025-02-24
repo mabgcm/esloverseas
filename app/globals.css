@@ -19,3 +19,7 @@ main {
   top: 0;
   left: 100%;
 }
+
+.hero-section {
+  background: url('/images/hero-bg.jpg') no-repeat center/cover;
+}

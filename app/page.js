@@ -1,19 +1,12 @@
 'use client';
 import Link from "next/link";
+import HeroSection from "./components/Hersection";
 
 export default function Home() {
   return (
     <>
       <div className="text-center">
-        {/* Welcome Section (Hero Area) */}
-        <h1>Teach in Asia, Change Lives</h1>
-        <p>Connecting native English teachers with schools across Asia for education and adventure.</p>
-        <Link href="/for-teachers">
-          <p>Apply Now to Teach in Asia</p>
-        </Link>
-        <Link href="/for-schools">
-          <p>Partner With Us for Quality Teachers</p>
-        </Link>
+        <HeroSection />
 
         {/* Quick Introduction */}
         <h2>Who We Are</h2>
