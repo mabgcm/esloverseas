@@ -5,7 +5,7 @@
 
 .heroImage {
     transition: opacity 2s ease-in-out, filter 3s ease-in-out;
-    opacity: 100;
+    opacity: 10;
     filter: blur(100px);
 
     .heroSection {
@@ -21,7 +21,7 @@
         height: 100%;
         object-fit: cover;
         transition: opacity 1s ease-in-out, filter 1s ease-in-out;
-        opacity: 0;
+        opacity: 10;
         filter: blur(100px);
     }
 
