@@ -15,10 +15,10 @@ const HeroSection = () => {
 
     // Array of image URLs
     const images = [
-        '/images/hero-teacher-asia.jpg',
-        '/images/hero-teacher-asia2.jpg',
-        '/images/hero-teacher-asia.jpg',
-        '/images/hero-teacher-asia2.jpg',
+        '/images/hero-teacher-asia/1.jpg',
+        '/images/hero-teacher-asia/2.jpg',
+        '/images/hero-teacher-asia/3.jpg',
+        '/images/hero-teacher-asia/4.jpg',
     ];
 
     // Typewriter hook configuration
