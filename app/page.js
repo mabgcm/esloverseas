@@ -1,6 +1,6 @@
 'use client';
-import Link from "next/link";
 import HeroSection from "./components/Hersection";
+import QuickIntro from "./components/QuickIntro";
 
 export default function Home() {
   return (
@@ -8,13 +8,7 @@ export default function Home() {
       <div className="text-center">
         <HeroSection />
 
-        {/* Quick Introduction */}
-        <h2>Who We Are</h2>
-        <p>
-          ESL Overseas is your gateway to teaching English in Asia. We match passionate native English speakers
-          with schools and language centers eager for quality education. Whether you’re a teacher seeking
-          adventure or a school looking for reliable talent, we make it happen—seamlessly.
-        </p>
+        <QuickIntro />
 
         {/* Key Benefits */}
         <h2>Why Choose ESL Overseas?</h2>

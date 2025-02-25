@@ -1,7 +1,7 @@
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import styles from '../styles/Herosection.module.css'; // Import CSS module for custom styles
+import styles from '../styles/Herosection.module.css';
 
 
 const HeroSection = () => {

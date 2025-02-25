@@ -1,0 +1,25 @@
+.quickIntro {
+    background-color: #ffffff;
+}
+
+.quickIntro .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quickIntro .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.strong {
+    font-weight: 900;
+}
