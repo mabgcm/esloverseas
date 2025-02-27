@@ -23,3 +23,14 @@
 .strong {
     font-weight: 900;
 }
+
+.quickIntro .equal-height {
+    display: flex;
+    align-items: stretch;
+}
+
+.quickIntro .equal-height>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

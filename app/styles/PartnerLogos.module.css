@@ -1,0 +1,45 @@
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.logoSlider {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.logoTrack {
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.logoItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    /* Space between logos */
+    flex-wrap: wrap;
+    /* Allows wrapping on small screens */
+    padding: 20px 0;
+    /* margin-top: 40px; Optionally move this to CSS if preferred */
+}
+
+.sliderWrapper {
+    margin-top: 40px;
+    /* Space between description and logos */
+}
