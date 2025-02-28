@@ -6,7 +6,7 @@ import styles from '../styles/QuickIntro.module.css';
 
 const QuickIntro = () => {
     return (
-        <section className={`py-5 ${styles.quickIntro}`}>
+        <section className={`py-3 ${styles.quickIntro}`}>
             <div className="container">
                 <h2 className="display-5 fw-bold mb-4 text-center col-12">Who We Are</h2>
 
@@ -27,7 +27,7 @@ const QuickIntro = () => {
                     </div>
                     <div className="col-12 col-md-6 d-flex align-items-center mt-sm-5">
                         <div>
-                            <h4 className='text-center'>Your Gateway to Teaching in Asia.</h4>
+                            <h4 className='text-center mt-3'>Your Gateway to Teaching in Asia.</h4>
                             <p className="lead mb-3 text-md-start">
                                 Welcome to ESL Overseas, where your dream of teaching in Asia becomes a reality. We know the journey can feel overwhelming—cultural unknowns, job searches, paperwork, and those nagging what-ifs.
                             </p>

@@ -43,7 +43,7 @@ const HeroSection = () => {
     }, [images.length]);
 
     return (
-        <section className={`min-vh-100 d-flex align-items-center ${styles.heroSection}`} style={{ width: '100vw' }}>
+        <section className={`min-vh-90 d-flex align-items-center ${styles.heroSection}`} style={{ width: '100vw' }}>
             <div className="row align-items-center w-100 h-100 m-0">
                 {/* Left Column: Image (5/12 width on desktop, full width on mobile) */}
                 <div className="col-12 col-xl-6 d-flex justify-content-center">
