@@ -53,9 +53,6 @@ const PartnerLogos = () => {
     return (
         <section className="py-4 bg-white border-top border-bottom">
             <div className="container">
-                <p className={`text-center mb-4 ${styles.fadeIn}`}>
-                    Whether you’re a teacher seeking adventure or a school looking for reliable talent, we make it happen—seamlessly and with confidence.
-                </p>
                 <div className={styles.sliderWrapper}>
                     <Slider {...sliderSettings}>
                         {partners.map((partner, index) => (

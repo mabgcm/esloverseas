@@ -325,7 +325,7 @@ postcss@8.4.31:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prop-types@^15.8.1:
+prop-types@^15.5.10, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -340,6 +340,13 @@ react-dom@^19.0.0:
   integrity sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==
   dependencies:
     scheduler "^0.25.0"
+
+react-hover@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-hover/-/react-hover-3.0.1.tgz#ca610d1b6e330779f33745a8806059976686056a"
+  integrity sha512-Gc72Cz960ERpFoapPc7SN1ixIYk72rAFWpjUBSEDLmV/H4/d0vTPLTTcFx5EOJrGPwzY2Fb0h5soH/JrtGXenQ==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-icons@^5.5.0:
   version "5.5.0"

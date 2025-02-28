@@ -1,20 +1,35 @@
 'use client';
-import Image from 'next/image'; // For optimized images (optional, for the map or teacher image)
-import { useEffect } from 'react';
-import { FaCheckCircle, FaStar, FaHome, FaMoneyBillWave, FaGlobe, FaUserCheck } from 'react-icons/fa'; // Import icons from react-icons
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { FaCheckCircle, FaStar, FaHome, FaMoneyBillWave, FaGlobe, FaUserCheck, FaSearch, FaGraduationCap, FaUsers, FaClock, FaThumbsUp, FaHandshake, FaFileContract } from 'react-icons/fa';
 import Link from 'next/link';
 import styles from '../styles/QuickIntro.module.css';
+import Hover from 'react-hover';
+import { ensureArray } from '../../utils/ensureArray';
 
 const QuickIntro = () => {
-    // Simple fade-in animation using useEffect and CSS classes
+    const [isMounted, setIsMounted] = useState(false);
+
     useEffect(() => {
-        const elements = document.querySelectorAll('.fade-in');
-        elements.forEach((element, index) => {
-            setTimeout(() => {
-                element.classList.add('visible');
-            }, index * 200); // Staggered animation (200ms delay per element)
-        });
+        setIsMounted(true);
     }, []);
+
+    useEffect(() => {
+        if (isMounted) {
+            const elements = ensureArray(document.querySelectorAll('.fade-in'));
+            elements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 200);
+            });
+        }
+    }, [isMounted]);
+
+    const hoverOptions = {
+        followCursor: true,
+        shiftX: 20,
+        shiftY: 0
+    };
 
     return (
         <section className={`py-5 ${styles.quickIntro}`}>
@@ -22,33 +37,31 @@ const QuickIntro = () => {
                 <h2 className="display-5 fw-bold mb-4 text-center fade-in col-12">Who We Are</h2>
 
                 {/* Hero Image and Text Side by Side */}
-                <div className="row align-items-stretch mb-5" style={{ minHeight: '400px' }}> {/* Added align-items-stretch and min-height */}
+                <div className="row align-items-stretch mb-5" style={{ minHeight: '400px' }}>
                     <div className="col-12 col-md-6 fade-in">
-                        <div style={{ height: '100%', width: '100%', overflow: 'hidden', borderRadius: '8px' }}> {/* Container for image */}
+                        <div style={{ height: '100%', width: '100%', overflow: 'hidden', borderRadius: '8px' }}>
                             <Image
                                 src="/images/teacher-asia-map.jpg"
                                 alt="Map of Asia with teacher"
-                                width={600} // Maintain aspect ratio
-                                height={400} // Base height, will scale with container
+                                width={600}
+                                height={400}
                                 className="img-fluid rounded shadow-sm"
-                                style={{ objectFit: 'cover', height: '100%', width: '100%' }} // Ensure image fills container
+                                style={{ objectFit: 'cover', height: '100%', width: '100%' }}
                                 priority
                             />
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 fade-in d-flex align-items-center">
-                        <div> {/* Wrap text in a div for better control */}
-                            <h4 className='text-start'>ESL Overseas: Your Trusted Partner for Teaching in Asia</h4>
+                    <div className="col-12 col-md-6 fade-in d-flex align-items-center mt-sm-5">
+                        <div>
+                            <h4 className='text-center'>Your Gateway to Teaching in Asia.</h4>
                             <p className="lead mb-3 text-md-start">
-                                We are your gateway to an unforgettable teaching experience in Asia, connecting passionate native English
-                                speakers with schools and language centers eager for quality education.
+                                Welcome to ESL Overseas, where your dream of teaching in Asia becomes a reality. We know the journey can feel overwhelming—cultural unknowns, job searches, paperwork, and those nagging what-ifs.
                             </p>
                             <p className="lead mb-3 text-md-start">
-                                We understand the challenges you might face — <strong> adapting to new cultures, navigating visas, or stepping into teaching for the first time</strong>. We’ve been there, done that, and faced those same hurdles ourselves. With our deep, firsthand experience across every level and country in Asia, we’re here to guide you every step of the way, solving your problems and ensuring a seamless, rewarding journey.
-                            </p>
+                                That’s why we’re here: to guide you every step of the way with confidence and clarity. From planning to thriving abroad, we’ve got you covered.</p>
                             <div className="text-center mt-4">
                                 <Link href="/for-teachers">
-                                    <button className={`btn btn-primary btn-lg `}>Apply Now and Change Your Life</button>
+                                    <button className={`btn btn-primary btn-lg `}>Get Started</button>
                                 </Link>
                             </div>
                         </div>
@@ -63,7 +76,7 @@ const QuickIntro = () => {
                             <FaCheckCircle className="text-success display-6 mb-3" />
                             <h4 className="card-title fw-bold">Insiders with Experience</h4>
                             <p className="lead card-text">
-                                We’ve been there—on both sides, at every level, in every country. Our deep understanding of the region ensures you’re in expert hands.
+                                We’re more than a service—we’re your partner in adventure. Whether you’re unsure where to begin, how to qualify, or what living abroad entails, our all-in-one solutions transform stress into excitement. Explore Asia’s classrooms with the confidence that comes from our team’s extensive, hands-on experience across the region.
                             </p>
                         </div>
                     </div>
@@ -72,59 +85,201 @@ const QuickIntro = () => {
                             <FaStar className="text-success display-6 mb-3" />
                             <h4 className="card-title fw-bold">Proven Expertise</h4>
                             <p className="lead card-text">
-                                With years of hands-on experience, we bring unmatched insight to help teachers and schools thrive.
+                                With years of proven expertise, we offer unmatched insight to help teachers and schools succeed. Our deep regional knowledge—gained from every level and country—ensures you’re in expert hands. Step into your journey with the support needed to thrive, guided by insiders who’ve been there.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                {/* What We Offer - Styled as Colored Cards Similar to Attachment */}
-                <h3 className="h5 fw-bold mb-4 mt-5 text-center text-md-start fade-in col-12">What We Offer</h3>
-                <p className="lead mb-3 text-center text-md-start fade-in col-12">
-                    We’re committed to providing the best conditions for everyone involved:
-                </p>
-                <div className="row g-4">
-                    <div className="col-12 col-md-3 col-6 fade-in">
-                        <div className="card h-100 border-0 shadow-sm p-3 d-flex justify-content-center align-items-center" style={{ backgroundColor: '#fef3f2', borderRadius: '12px' }}>
-                            <FaHome className="text-danger display-6 mb-3" />
-                            <h4 className="card-title fw-bold">Housing</h4>
-                            <p className="card-text">
-                                Comfortable, convenient housing tailored to your needs.
-                            </p>
+                <div className="text-center mb-5">
+                    <h1 className="display-5 fw-bold mb-4 text-center fade-in col-12">How We Can Help You</h1>
+                    <p className="lead text-muted">
+                        Tailored solutions to make your journey seamless and exciting.
+                    </p>
+                </div>
+
+                {/* Services Grid */}
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    {/* Service 1 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaGlobe className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Find Your Perfect Fit
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Discover the right country and job for you with personalized assessments and immersive previews. No more guesswork—just a clear path forward.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/find-your-perfect-fit">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-3 col-6 fade-in">
-                        <div className="card h-100 border-0 shadow-sm p-3 d-flex justify-content-center align-items-center" style={{ backgroundColor: '#ffe4e1', borderRadius: '12px' }}>
-                            <FaMoneyBillWave className="text-primary display-6 mb-3" />
-                            <h4 className="card-title fw-bold">Allowance</h4>
-                            <p className="card-text">
-                                Competitive pay and benefits to support your adventure.
-                            </p>
+
+                    {/* Service 2 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaSearch className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Simplify the Search
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Access curated job listings, expert guides, and real-time advice. We cut through the noise so you don’t have to.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/simplify-the-search">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-3 col-6 fade-in">
-                        <div className="card h-100 border-0 shadow-sm p-3 d-flex justify-content-center align-items-center" style={{ backgroundColor: '#e8f8f5', borderRadius: '12px' }}>
-                            <FaGlobe className="text-success display-6 mb-3" />
-                            <h4 className="card-title fw-bold">Ideal Locations</h4>
-                            <p className="card-text">
-                                Vibrant, culturally rich destinations across Asia.
-                            </p>
+
+                    {/* Service 3 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaGraduationCap className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Get Qualified, Fast
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Boost your credentials with our fast-track programs and verification help. We’ll make sure you’re ready to shine.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/get-qualified-fast">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
                         </div>
                     </div>
-                    <div className="col-12 col-md-3 col-6 fade-in d-flex justify-content-center align-items-center">
-                        <div className="card h-100 border-0 shadow-sm p-3 d-flex justify-content-center align-items-center" style={{ backgroundColor: '#fef3f2', borderRadius: '12px' }}>
-                            <FaUserCheck className="text-danger display-6 mb-3" />
-                            <h4 className="card-title fw-bold">Top-Tier Teachers</h4>
-                            <p className="card-text">
-                                Vetted, dedicated native speakers for schools; comprehensive support for teachers.
-                            </p>
+
+                    {/* Service 4 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaMoneyBillWave className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Ease the Money Worries
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Plan your finances with tailored tools, affordable loans, and a safety net for peace of mind.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/ease-the-money-worries">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Service 5 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaUsers className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Bring Family Along
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Get resources to prep your loved ones and stay connected, no matter the distance.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/bring-family-along">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Service 6 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaClock className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Time It Right
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Sync your move with hiring seasons and secure your spot—on your terms.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/time-it-right">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Service 7 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaThumbsUp className="text-primary display-6 mb-3" />
+                                <h4 className=" fw-bold">
+                                    Build Your Confidence
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Master the skills and mindset to thrive with workshops, mentors, and a no-fail backup plan.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/build-your-confidence">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Service 8 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaHandshake className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Trust the Process
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Work with vetted schools and recruiters, backed by honest reviews and on-the-ground insights.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/trust-the-process">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Service 9 */}
+                    <div className="col">
+                        <div className="card h-100 shadow-sm border-0">
+                            <div className="card-body text-center">
+                                <FaFileContract className="text-primary display-6 mb-3" />
+                                <h4 className="card-title fw-bold">
+                                    Commit with Ease
+                                </h4>
+                                <p className="card-text text-muted">
+                                    Navigate contracts worry-free with expert reviews and flexible exit options.
+                                </p>
+                                <Hover options={hoverOptions}>
+                                    <Link href="/services/commit-with-ease">
+                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
+                                    </Link>
+                                </Hover>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <p className="lead mt-4 text-center text-md-start fade-in col-12">
-                    Whether you’re a teacher seeking adventure or a school looking for reliable talent, we make it happen—seamlessly and with confidence.
-                </p>
             </div>
         </section>
     );
