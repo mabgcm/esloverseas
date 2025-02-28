@@ -1,44 +1,18 @@
 'use client';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { FaCheckCircle, FaStar, FaHome, FaMoneyBillWave, FaGlobe, FaUserCheck, FaSearch, FaGraduationCap, FaUsers, FaClock, FaThumbsUp, FaHandshake, FaFileContract } from 'react-icons/fa';
 import Link from 'next/link';
 import styles from '../styles/QuickIntro.module.css';
-import Hover from 'react-hover';
-import { ensureArray } from '../../utils/ensureArray';
 
 const QuickIntro = () => {
-    const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
-
-    useEffect(() => {
-        if (isMounted) {
-            const elements = ensureArray(document.querySelectorAll('.fade-in'));
-            elements.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('visible');
-                }, index * 200);
-            });
-        }
-    }, [isMounted]);
-
-    const hoverOptions = {
-        followCursor: true,
-        shiftX: 20,
-        shiftY: 0
-    };
-
     return (
         <section className={`py-5 ${styles.quickIntro}`}>
             <div className="container">
-                <h2 className="display-5 fw-bold mb-4 text-center fade-in col-12">Who We Are</h2>
+                <h2 className="display-5 fw-bold mb-4 text-center col-12">Who We Are</h2>
 
                 {/* Hero Image and Text Side by Side */}
                 <div className="row align-items-stretch mb-5" style={{ minHeight: '400px' }}>
-                    <div className="col-12 col-md-6 fade-in">
+                    <div className="col-12 col-md-6">
                         <div style={{ height: '100%', width: '100%', overflow: 'hidden', borderRadius: '8px' }}>
                             <Image
                                 src="/images/teacher-asia-map.jpg"
@@ -51,7 +25,7 @@ const QuickIntro = () => {
                             />
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 fade-in d-flex align-items-center mt-sm-5">
+                    <div className="col-12 col-md-6 d-flex align-items-center mt-sm-5">
                         <div>
                             <h4 className='text-center'>Your Gateway to Teaching in Asia.</h4>
                             <p className="lead mb-3 text-md-start">
@@ -69,9 +43,9 @@ const QuickIntro = () => {
                 </div>
 
                 {/* Why Trust Us? - With Icons and Cards */}
-                <h2 className="display-5 fw-bold mb-4 text-center fade-in col-12">Why Trust Us?</h2>
+                <h2 className="display-5 fw-bold mb-4 text-center col-12">Why Trust Us?</h2>
                 <div className="row g-4">
-                    <div className="col-12 col-md-6 fade-in">
+                    <div className="col-12 col-md-6">
                         <div className="card h-100 border-0 shadow-sm p-3 d-flex justify-content-center align-items-center">
                             <FaCheckCircle className="text-success display-6 mb-3" />
                             <h4 className="card-title fw-bold">Insiders with Experience</h4>
@@ -80,7 +54,7 @@ const QuickIntro = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="col-12 col-md-6 fade-in">
+                    <div className="col-12 col-md-6">
                         <div className="card h-100 border-0 shadow-sm p-3 d-flex justify-content-center align-items-center">
                             <FaStar className="text-success display-6 mb-3" />
                             <h4 className="card-title fw-bold">Proven Expertise</h4>
@@ -92,7 +66,7 @@ const QuickIntro = () => {
                 </div>
 
                 <div className="text-center mb-5">
-                    <h1 className="display-5 fw-bold mb-4 text-center fade-in col-12">How We Can Help You</h1>
+                    <h1 className="display-5 fw-bold mb-4 text-center col-12">How We Can Help You</h1>
                     <p className="lead text-muted">
                         Tailored solutions to make your journey seamless and exciting.
                     </p>
@@ -111,11 +85,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Discover the right country and job for you with personalized assessments and immersive previews. No more guesswork—just a clear path forward.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/find-your-perfect-fit">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/find-your-perfect-fit">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -131,11 +103,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Access curated job listings, expert guides, and real-time advice. We cut through the noise so you don’t have to.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/simplify-the-search">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/simplify-the-search">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -151,11 +121,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Boost your credentials with our fast-track programs and verification help. We’ll make sure you’re ready to shine.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/get-qualified-fast">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/get-qualified-fast">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -171,11 +139,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Plan your finances with tailored tools, affordable loans, and a safety net for peace of mind.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/ease-the-money-worries">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/ease-the-money-worries">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -191,11 +157,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Get resources to prep your loved ones and stay connected, no matter the distance.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/bring-family-along">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/bring-family-along">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -211,11 +175,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Sync your move with hiring seasons and secure your spot—on your terms.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/time-it-right">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/time-it-right">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -231,11 +193,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Master the skills and mindset to thrive with workshops, mentors, and a no-fail backup plan.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/build-your-confidence">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/build-your-confidence">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -251,11 +211,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Work with vetted schools and recruiters, backed by honest reviews and on-the-ground insights.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/trust-the-process">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/trust-the-process">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -271,11 +229,9 @@ const QuickIntro = () => {
                                 <p className="card-text text-muted">
                                     Navigate contracts worry-free with expert reviews and flexible exit options.
                                 </p>
-                                <Hover options={hoverOptions}>
-                                    <Link href="/services/commit-with-ease">
-                                        <p className={`text-primary small ${styles.learnMore}`}>Learn More</p>
-                                    </Link>
-                                </Hover>
+                                <Link href="/services/commit-with-ease">
+                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
+                                </Link>
                             </div>
                         </div>
                     </div>
