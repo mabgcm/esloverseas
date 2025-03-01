@@ -10,6 +10,7 @@ export default function CtaFormPage() {
         experience: '',
         certification: '',
         startDate: '',
+        budget: '', // Added to match potential form input
         familySupport: '',
         concerns: '',
         message: ''
@@ -22,20 +23,24 @@ export default function CtaFormPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('Form submitted with data:', formData); // Debug log
         try {
-            const response = await fetch('app/api/submit-form/route.js', {
+            const response = await fetch('/api/submit-form', { // Corrected endpoint
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
+            console.log('API Response:', response); // Debug API response
             if (response.ok) {
                 alert('Application submitted successfully!');
                 setFormData({
                     name: '', email: '', phone: '', destination: '', experience: '',
-                    certification: '', startDate: '', familySupport: '',
+                    certification: '', startDate: '', budget: '', familySupport: '',
                     concerns: '', message: ''
                 });
             } else {
+                const errorText = await response.text();
+                console.error('API Error:', errorText);
                 alert('Something went wrong. Please try again.');
             }
         } catch (error) {
@@ -124,6 +129,18 @@ export default function CtaFormPage() {
                                 <option value="1-3 years">1-3 years</option>
                                 <option value="3+ years">3+ years</option>
                             </select>
+                        </div>
+                        <div className="col-md-6">
+                            <label htmlFor="budget" className="form-label">Monthly Budget (USD)</label>
+                            <input
+                                type="number"
+                                className="form-control"
+                                id="budget"
+                                name="budget"
+                                value={formData.budget}
+                                onChange={handleInputChange}
+                                placeholder="e.g., 1500"
+                            />
                         </div>
                         <div className="col-md-6">
                             <label htmlFor="certification" className="form-label">Do You Have a TEFL/TESOL Certification?</label>
