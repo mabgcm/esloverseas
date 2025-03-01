@@ -1,0 +1,87 @@
+.modalBackdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1050;
+}
+
+.modalDialog {
+    max-width: 800px;
+    /* Wider for more fields */
+}
+
+.modalContent {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modalHeader {
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+}
+
+.modalTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2e7d32;
+    /* Forest green to match your services palette */
+}
+
+.modalBody {
+    padding: 1.5rem;
+}
+
+.formLabel {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.formControl {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formControl:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.formSelect {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formSelect:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.submitButton {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 6px;
+    background-color: #1976d2;
+    /* Deep blue for a strong CTA */
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+    background-color: #1565c0;
+}
