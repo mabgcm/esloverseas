@@ -12,6 +12,7 @@ export async function POST(req) {
             experience,
             certification,
             startDate,
+            budget,
             familySupport,
             concerns,
             message
@@ -25,6 +26,7 @@ export async function POST(req) {
             experience,
             certification,
             startDate,
+            budget,
             familySupport,
             concerns,
             message
