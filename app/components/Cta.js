@@ -16,7 +16,7 @@ const CTA = () => {
                             Answered. Your concerns? Solved. Your next chapter? Unforgettable.
                         </p>
                         <a
-                            href="#get-started"
+                            href="/ctaform"
                             className="btn btn-primary btn-lg px-4 py-2 fw-semibold"
                         >
                             Start Your Journey

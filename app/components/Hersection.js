@@ -63,7 +63,7 @@ const HeroSection = () => {
                         {text}
                         <Cursor cursorStyle="|" />
                     </p>
-                    <Link href="/for-teachers">
+                    <Link href="/ctaform">
                         <button className={`btn btn-primary btn-lg `}>Apply Now and Change Your Life</button>
                     </Link>
                 </div>

@@ -34,7 +34,7 @@ const QuickIntro = () => {
                             <p className="lead mb-3 text-md-start">
                                 That’s why we’re here: to guide you every step of the way with confidence and clarity. From planning to thriving abroad, we’ve got you covered.</p>
                             <div className="text-center mt-4">
-                                <Link href="/for-teachers">
+                                <Link href="/ctaform">
                                     <button className={`btn btn-primary btn-lg `}>Get Started</button>
                                 </Link>
                             </div>
