@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './globals.css';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
 import ClientOnly from './components/ClientOnly';
 import { Analytics } from "@vercel/analytics/react"
 
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <Analytics />
         <ClientOnly>
-          <Navbar />
+          {/* <Navbar /> */}
           <main>{children}</main>
         </ClientOnly>
       </body>

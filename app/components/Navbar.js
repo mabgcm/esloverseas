@@ -1,5 +1,5 @@
 'use client';
-import styles from './Navbar.module.css';
+import styles from '../styles/Navbar.module.css';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,13 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [hoveredLink, setHoveredLink] = useState(null);
-
-    // Load Bootstrap JS client-side
-    // useEffect(() => {
-    //     if (typeof window !== 'undefined') {
-    //         import('bootstrap/dist/js/bootstrap.bundle.min.js');
-    //     }
-    // }, []);
 
     const linkStyle = {
         color: '#FFFFFF', // Replace with your desired text color

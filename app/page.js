@@ -14,10 +14,11 @@ const ReelsDisplay = dynamic(() => import('./components/ReelsDisplay'), {
 export default function Home() {
 
   const reels = [
-    { url: 'https://www.instagram.com/reel/DGlIhdQNSYU' },
-    { url: 'https://www.instagram.com/reel/DCxIYTxtxab' },
-    { url: 'https://www.instagram.com/reel/DCYpRSLoLzK' },
-    { url: 'https://www.instagram.com/reel/DFvnpO2o3_N' },
+    { url: 'https://www.instagram.com/reel/DDw4nORo2ul' },
+    { url: 'https://www.instagram.com/reel/DCEVO-motSi' },
+    { url: 'https://www.instagram.com/reel/DB1BzNMBesu' },
+    { url: 'https://www.instagram.com/reel/DBYtAvwo_HP' },
+    { url: 'https://www.instagram.com/reel/DBOWaqAoX5p' },
   ];
 
   return (

@@ -1,8 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
-
-// Import slick-carousel CSS
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -37,7 +35,7 @@ const ReelsDisplay = ({ reels }) => {
         dots: true, // Show navigation dots
         infinite: true, // Loop through slides
         speed: 500, // Transition speed in milliseconds
-        slidesToShow: 3, // Show 3 reels at a time (adjust for responsiveness)
+        slidesToShow: 4, // Show 3 reels at a time (adjust for responsiveness)
         slidesToScroll: 1, // Scroll 1 reel at a time
         centerMode: true, // Center the active slide
         centerPadding: '0', // No padding on sides (adjust if needed)
@@ -71,7 +69,8 @@ const ReelsDisplay = ({ reels }) => {
     };
 
     return (
-        <div className="container mt-5 mb-5"> {/* Margin top (mt-5) and bottom (mb-5) */}
+        <div className="container mt-5 mb-5">
+            <h4 className='text-center my-4'>ESL Diaries: Teachers Share the Journey</h4>
             <Slider ref={sliderRef} {...sliderSettings}>
                 {reels.map((reel, index) => (
                     <div key={index} className="col text-center">
@@ -79,10 +78,22 @@ const ReelsDisplay = ({ reels }) => {
                             style={{
                                 position: 'relative',
                                 width: '100%',
-                                maxWidth: '300px',
-                                height: '400px',
+                                maxWidth: '280px',
+                                height: '490px',
                                 overflow: 'hidden',
                                 margin: '0 auto',
+                                border: '5px solid', // Base for gradient border
+                                borderImage: 'linear-gradient(to right, #ffb6c1, #87ceeb, #98ff98, #d8bfd8, #e6e6fa) 1', // Pastel rainbow gradient
+                                borderRadius: '2px', // Rounded corners
+                                background: 'linear-gradient(135deg, #fff5f7, #f0f8ff)', // Soft pastel gradient background
+                                padding: '10px', // Padding inside the frame
+                                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)', // Subtle shadow for depth
+                                // Optional: Add a slight animation for hover
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                ':hover': {
+                                    transform: 'scale(1.05)', // Slight zoom on hover
+                                    boxShadow: '0 6px 16px rgba(0, 0, 0, 0.2)', // Darker shadow on hover
+                                },
                             }}
                         >
                             <blockquote
@@ -91,8 +102,8 @@ const ReelsDisplay = ({ reels }) => {
                                 data-instgrm-version="14"
                                 style={{
                                     position: 'absolute',
-                                    top: '-50px', // Shift up to crop the top
-                                    left: '-50px', // Shift left to crop the left edge
+                                    top: '-55px', // Shift up to crop the top
+                                    left: '-60px', // Shift left to crop the left edge
                                     width: '400px', // Fixed width to constrain the visible area
                                     margin: 0,
                                     maxWidth: '540px',

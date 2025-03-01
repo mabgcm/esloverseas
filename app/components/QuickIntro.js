@@ -43,7 +43,7 @@ const QuickIntro = () => {
                 </div>
 
                 {/* Why Trust Us? - With Icons and Cards */}
-                <h2 className="display-5 fw-bold mb-4 text-center col-12">Why Trust Us?</h2>
+                <h2 className="display-5 fw-bold my-4 text-center col-12">Why Trust Us?</h2>
                 <div className="row g-4">
                     <div className="col-12 col-md-6">
                         <div className="card h-100 border-0 shadow-sm p-3 d-flex justify-content-center align-items-center">
@@ -66,172 +66,126 @@ const QuickIntro = () => {
                 </div>
 
                 <div className="text-center mb-5">
-                    <h1 className="display-5 fw-bold mb-4 text-center col-12">How We Can Help You</h1>
+                    <h1 className="display-5 fw-bold my-4 text-center col-12">How We Can Help You</h1>
                     <p className="lead text-muted">
                         Tailored solutions to make your journey seamless and exciting.
                     </p>
                 </div>
 
-                {/* Services Grid */}
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                     {/* Service 1 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#E6F3E6' }}>
                             <div className="card-body text-center">
-                                <FaGlobe className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Find Your Perfect Fit
-                                </h4>
+                                <FaGlobe className="display-6 mb-3" style={{ color: '#2E7D32' }} />
+                                <h4 className="card-title fw-bold">Find Your Perfect Fit</h4>
                                 <p className="card-text text-muted">
                                     Discover the right country and job for you with personalized assessments and immersive previews. No more guesswork—just a clear path forward.
                                 </p>
-                                <Link href="/services/find-your-perfect-fit">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 2 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#E3F2FD' }}>
                             <div className="card-body text-center">
-                                <FaSearch className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Simplify the Search
-                                </h4>
+                                <FaSearch className="display-6 mb-3" style={{ color: '#1976D2' }} />
+                                <h4 className="card-title fw-bold">Simplify the Search</h4>
                                 <p className="card-text text-muted">
                                     Access curated job listings, expert guides, and real-time advice. We cut through the noise so you don’t have to.
                                 </p>
-                                <Link href="/services/simplify-the-search">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 3 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#FFF3E0' }}>
                             <div className="card-body text-center">
-                                <FaGraduationCap className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Get Qualified, Fast
-                                </h4>
+                                <FaGraduationCap className="display-6 mb-3" style={{ color: '#F57C00' }} />
+                                <h4 className="card-title fw-bold">Get Qualified, Fast</h4>
                                 <p className="card-text text-muted">
                                     Boost your credentials with our fast-track programs and verification help. We’ll make sure you’re ready to shine.
                                 </p>
-                                <Link href="/services/get-qualified-fast">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 4 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#F1F8E9' }}>
                             <div className="card-body text-center">
-                                <FaMoneyBillWave className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Ease the Money Worries
-                                </h4>
+                                <FaMoneyBillWave className="display-6 mb-3" style={{ color: '#558B2F' }} />
+                                <h4 className="card-title fw-bold">Ease the Money Worries</h4>
                                 <p className="card-text text-muted">
                                     Plan your finances with tailored tools, affordable loans, and a safety net for peace of mind.
                                 </p>
-                                <Link href="/services/ease-the-money-worries">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 5 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#FCE4EC' }}>
                             <div className="card-body text-center">
-                                <FaUsers className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Bring Family Along
-                                </h4>
+                                <FaUsers className="display-6 mb-3" style={{ color: '#C2185B' }} />
+                                <h4 className="card-title fw-bold">Bring Family Along</h4>
                                 <p className="card-text text-muted">
                                     Get resources to prep your loved ones and stay connected, no matter the distance.
                                 </p>
-                                <Link href="/services/bring-family-along">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 6 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#E0F7FA' }}>
                             <div className="card-body text-center">
-                                <FaClock className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Time It Right
-                                </h4>
+                                <FaClock className="display-6 mb-3" style={{ color: '#006064' }} />
+                                <h4 className="card-title fw-bold">Time It Right</h4>
                                 <p className="card-text text-muted">
                                     Sync your move with hiring seasons and secure your spot—on your terms.
                                 </p>
-                                <Link href="/services/time-it-right">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 7 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#F9FBE7' }}>
                             <div className="card-body text-center">
-                                <FaThumbsUp className="text-primary display-6 mb-3" />
-                                <h4 className=" fw-bold">
-                                    Build Your Confidence
-                                </h4>
+                                <FaThumbsUp className="display-6 mb-3" style={{ color: '#827717' }} />
+                                <h4 className="card-title fw-bold">Build Your Confidence</h4>
                                 <p className="card-text text-muted">
                                     Master the skills and mindset to thrive with workshops, mentors, and a no-fail backup plan.
                                 </p>
-                                <Link href="/services/build-your-confidence">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 8 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#EFEBE9' }}>
                             <div className="card-body text-center">
-                                <FaHandshake className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Trust the Process
-                                </h4>
+                                <FaHandshake className="display-6 mb-3" style={{ color: '#4E342E' }} />
+                                <h4 className="card-title fw-bold">Trust the Process</h4>
                                 <p className="card-text text-muted">
                                     Work with vetted schools and recruiters, backed by honest reviews and on-the-ground insights.
                                 </p>
-                                <Link href="/services/trust-the-process">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
 
                     {/* Service 9 */}
                     <div className="col">
-                        <div className="card h-100 shadow-sm border-0">
+                        <div className="card h-100 shadow-sm border-0" style={{ backgroundColor: '#EDE7F6' }}>
                             <div className="card-body text-center">
-                                <FaFileContract className="text-primary display-6 mb-3" />
-                                <h4 className="card-title fw-bold">
-                                    Commit with Ease
-                                </h4>
+                                <FaFileContract className="display-6 mb-3" style={{ color: '#5E35B1' }} />
+                                <h4 className="card-title fw-bold">Commit with Ease</h4>
                                 <p className="card-text text-muted">
                                     Navigate contracts worry-free with expert reviews and flexible exit options.
                                 </p>
-                                <Link href="/services/commit-with-ease">
-                                    <p className="text-primary small" style={{ textDecoration: 'none' }}>Learn More</p>
-                                </Link>
                             </div>
                         </div>
                     </div>
