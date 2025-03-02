@@ -1,0 +1,276 @@
+.footer {
+    color: #333;
+    /* Dark gray for better readability */
+    background-color: #ffffff;
+    /* Clean white background */
+    font-size: 16px;
+    /* Default font size for readability */
+    padding: 40px 0 20px;
+    /* Reduced padding for a tighter look */
+    border-top: 1px solid #e9ecef;
+    /* Subtle top border for separation */
+    position: relative;
+}
+
+.footer .footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    /* Reduced gap for a tighter layout */
+    align-items: start;
+}
+
+.footer .footer-about .logo {
+    margin-bottom: 15px;
+    /* Reduced margin */
+}
+
+.footer .footer-about .logo .sitename {
+    font-size: 24px;
+    /* Smaller logo text to match Mentor design */
+    font-weight: 700;
+    color: #4682b4;
+    /* Deep blue for branding */
+    text-transform: uppercase;
+    /* For a modern look */
+}
+
+.logo img {
+    width: 150px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.footer .footer-about p {
+    font-size: 14px;
+    /* Smaller font size for tighter line height */
+    line-height: 1.2;
+    /* Smaller line height as requested */
+    color: #4682b4;
+    margin-bottom: 10px;
+    /* Reduced margin */
+}
+
+.footer .social-links {
+    margin-top: 15px;
+    /* Reduced margin */
+    display: flex;
+    /* Horizontal alignment */
+    gap: 10px;
+    /* Space between icons */
+}
+
+.footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    /* Smaller icons to match Mentor design */
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    /* Smaller icon size for visibility */
+    color: #666;
+    transition: 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.footer .social-links a:hover {
+    color: #4682b4;
+    /* Green accent to match Mentor’s "Subscribe" button */
+    border-color: #4682b4;
+    background-color: #ff5055;
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+.footer h4 {
+    font-size: 18px;
+    /* Smaller heading size */
+    font-weight: 600;
+    color: #ff5055;
+    margin-bottom: 15px;
+    /* Reduced margin */
+    position: relative;
+}
+
+.footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 20px;
+    /* Smaller underline */
+    height: 2px;
+    background-color: #ff5055;
+    /* Green to match Mentor design */
+}
+
+.footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .footer-links ul li {
+    padding: 1px 0;
+    /* Reduced padding for tighter spacing between links */
+}
+
+.footer .footer-links ul a {
+    color: #4682b4;
+    text-decoration: none;
+    font-size: 14px;
+    /* Smaller font size for links */
+    line-height: 1.0;
+    /* Even smaller line height for tighter link spacing */
+    transition: 0.3s ease;
+}
+
+.footer .footer-links ul a:hover {
+    color: #ff5055;
+    /* Green to match Mentor design */
+    padding-left: 5px;
+    /* Subtle animation */
+}
+
+.footer .footer-contact p {
+    margin-bottom: 5px;
+    /* Reduced margin */
+    color: #666;
+    font-size: 14px;
+    /* Smaller font size */
+    line-height: 1.2;
+    /* Smaller line height */
+}
+
+.footer .footer-newsletter .newsletter-form {
+    margin-top: 15px;
+    /* Reduced margin */
+    margin-bottom: 10px;
+    /* Reduced margin */
+    border-radius: 20px;
+    /* Slightly smaller radius to match Mentor */
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    overflow: hidden;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email] {
+    border: 0;
+    padding: 10px 15px;
+    /* Reduced padding */
+    width: 100%;
+    font-size: 14px;
+    /* Smaller font size */
+    color: #333;
+    outline: none;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit] {
+    border: 0;
+    font-size: 14px;
+    /* Smaller font size */
+    padding: 10px 20px;
+    /* Reduced padding */
+    background: #4682b4;
+    /* Green to match Mentor’s "Subscribe" button */
+    color: #fff;
+    border-radius: 0 20px 20px 0;
+    /* Match input radius */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+    background: #ff5055;
+    /* Darker green on hover */
+}
+
+.footer .footer-newsletter .loading,
+.footer .footer-newsletter .sent-message {
+    font-size: 12px;
+    /* Smaller font size */
+    color: #666;
+    margin-top: 5px;
+    /* Reduced margin */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.footer .footer-newsletter .loading.show,
+.footer .footer-newsletter .sent-message.show {
+    opacity: 1;
+}
+
+.footer .copyright {
+    background-color: #f8f9fa;
+    /* Light gray for contrast */
+    padding: 15px 0;
+    /* Reduced padding */
+    margin-top: 20px;
+    /* Reduced margin */
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    /* Smaller font size */
+}
+
+.footer .credits {
+    margin-top: 5px;
+    font-size: 12px;
+    /* Smaller font size */
+    color: #666;
+}
+
+.footer .credits a {
+    color: #ff5055;
+    /* Green to match Mentor design */
+    text-decoration: none;
+}
+
+.footer .credits a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        /* Reduced gap */
+    }
+
+    .footer .footer-newsletter .newsletter-form {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .footer .footer-newsletter .newsletter-form input[type=email] {
+        border-radius: 15px 15px 0 0;
+        margin-bottom: 10px;
+    }
+
+    .footer .footer-newsletter .newsletter-form input[type=submit] {
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+    }
+
+    .footer .social-links {
+        justify-content: center;
+        /* Center icons on mobile */
+    }
+}

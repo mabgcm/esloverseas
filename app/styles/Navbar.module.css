@@ -1,16 +1,30 @@
 .customnavbar {
-    background-color: #4CAF50;
+    background-color: #fff;
     /* Replace with your desired color */
 }
 
 .customnavbar .nav-link,
 .customnavbar .navbar-brand {
-    color: #FFF;
-    /* Replace with your desired text color */
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    /* Smaller font size for links */
+    line-height: 1.0;
+    /* Even smaller line height for tighter link spacing */
+    transition: 0.3s ease;
 }
 
 .customnavbar .nav-link:hover,
 .customnavbar .navbar-brand:hover {
-    color: #FFF;
-    /* Replace with your desired hover text color */
+    color: #28a745;
+    /* Green to match Mentor design */
+    padding-left: 5px;
+    /* Subtle animation */
+}
+
+.logo img {
+    width: 350px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
 }

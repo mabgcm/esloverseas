@@ -1,6 +1,6 @@
 'use client';
 import styles from '../styles/Navbar.module.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,11 +9,11 @@ export default function Navbar() {
     const [hoveredLink, setHoveredLink] = useState(null);
 
     const linkStyle = {
-        color: '#FFFFFF', // Replace with your desired text color
+        color: '#4682b4', // Replace with your desired text color
     };
 
     const linkHoverStyle = {
-        color: '#FFD700', // Replace with your desired hover text color
+        color: '#ff5055', //Theme green
     };
 
     const handleMouseEnter = (link) => {
@@ -28,9 +28,9 @@ export default function Navbar() {
         <nav className={`navbar navbar-expand-lg fixed-top ${styles.customnavbar}`}>
             <div className="container">
                 {/* Brand */}
-                <Link href="/" className="navbar-brand fw-bold" style={linkStyle}>
-                    Esl Overseas
-                </Link>
+                <a href="/" className={styles.logo}>
+                    <img src="images/toplogo.png" alt="ESL Overseas Logo" />
+                </a>
 
                 {/* Toggler */}
                 <button
@@ -70,24 +70,35 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/teachers" className="nav-link">
+                            <Link href="/teachers" className="nav-link"
+                                style={hoveredLink === 'teachers' ? linkHoverStyle : linkStyle}
+                                onMouseEnter={() => handleMouseEnter('teachers')}
+                                onMouseLeave={handleMouseLeave}>
                                 For Teachers
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/schools" className="nav-link">
+                            <Link href="/schools" className="nav-link"
+                                style={hoveredLink === 'schools' ? linkHoverStyle : linkStyle}
+                                onMouseEnter={() => handleMouseEnter('schools')}
+                                onMouseLeave={handleMouseLeave}>
                                 For Schools
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/faq" className="nav-link">
+                            <Link href="/faq" className="nav-link"
+                                style={hoveredLink === 'faq' ? linkHoverStyle : linkStyle}
+                                onMouseEnter={() => handleMouseEnter('faq')}
+                                onMouseLeave={handleMouseLeave}>
                                 FAQ
                             </Link>
                         </li>
                         <li className="nav-item dropdown">
                             <a
                                 className="nav-link dropdown-toggle"
-                                href="#"
+                                style={hoveredLink === 'jobs' ? linkHoverStyle : linkStyle}
+                                onMouseEnter={() => handleMouseEnter('jobs')}
+                                onMouseLeave={handleMouseLeave}
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
@@ -96,64 +107,100 @@ export default function Navbar() {
                             </a>
                             <ul className="dropdown-menu">
                                 <li>
-                                    <Link href="/dropdown1" className="dropdown-item">
+                                    <Link href="/china" className="dropdown-item"
+                                        style={hoveredLink === 'china' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('china')}
+                                        onMouseLeave={handleMouseLeave}>
                                         China
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown2" className="dropdown-item">
+                                    <Link href="/japan" className="dropdown-item"
+                                        style={hoveredLink === 'japan' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('japan')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Japan
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown3" className="dropdown-item">
+                                    <Link href="/korea" className="dropdown-item"
+                                        style={hoveredLink === 'korea' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('korea')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Korea
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown4" className="dropdown-item">
+                                    <Link href="/vietnam" className="dropdown-item"
+                                        style={hoveredLink === 'vietnam' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('vietnam')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Vietnam
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown5" className="dropdown-item">
+                                    <Link href="/hong" className="dropdown-item"
+                                        style={hoveredLink === 'hong' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('hong')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Hong Kong
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown6" className="dropdown-item">
+                                    <Link href="/thailand" className="dropdown-item"
+                                        style={hoveredLink === 'thailand' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('thailand')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Thailand
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown7" className="dropdown-item">
+                                    <Link href="/malaysia" className="dropdown-item"
+                                        style={hoveredLink === 'malaysia' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('malaysia')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Malaysia
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown8" className="dropdown-item">
+                                    <Link href="/singapore" className="dropdown-item"
+                                        style={hoveredLink === 'singapore' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('singapore')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Singapore
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown9" className="dropdown-item">
+                                    <Link href="/taiwan" className="dropdown-item"
+                                        style={hoveredLink === 'taiwan' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('taiwan')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Taiwan
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/dropdown10" className="dropdown-item">
+                                    <Link href="/cambodia" className="dropdown-item"
+                                        style={hoveredLink === 'cambodia' ? linkHoverStyle : linkStyle}
+                                        onMouseEnter={() => handleMouseEnter('cambodia')}
+                                        onMouseLeave={handleMouseLeave}>
                                         Cambodia
                                     </Link>
                                 </li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <Link href="/contact" className="nav-link">
+                            <Link href="/contact" className="nav-link"
+                                style={hoveredLink === 'contact' ? linkHoverStyle : linkStyle}
+                                onMouseEnter={() => handleMouseEnter('contact')}
+                                onMouseLeave={handleMouseLeave}>
                                 Contact
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/login" className="nav-link">
+                            <Link href="/login" className="nav-link"
+                                style={hoveredLink === 'login' ? linkHoverStyle : linkStyle}
+                                onMouseEnter={() => handleMouseEnter('login')}
+                                onMouseLeave={handleMouseLeave}>
                                 Log In
                             </Link>
                         </li>

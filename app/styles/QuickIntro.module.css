@@ -45,3 +45,17 @@
     /* Change to a darker shade of blue on hover */
     text-decoration: underline;
 }
+
+.customButton {
+    background-color: #ff5055;
+    /* Change to your desired color */
+    border-color: #ff5055;
+    /* Change to your desired color */
+}
+
+.customButton:hover {
+    background-color: #4682b4;
+    /* Change to your desired hover color */
+    border-color: #4682b4;
+    /* Change to your desired hover color */
+}

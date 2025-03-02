@@ -64,7 +64,7 @@ const HeroSection = () => {
                         <Cursor cursorStyle="|" />
                     </p>
                     <Link href="/ctaform">
-                        <button className={`btn btn-primary btn-lg `}>Apply Now and Change Your Life</button>
+                        <button className={`btn btn-primary btn-lg ${styles.customButton}`}>Apply Now and Change Your Life</button>
                     </Link>
                 </div>
             </div>

@@ -1,6 +1,12 @@
 'use client';
 import React, { useState } from 'react';
 
+const buttonStyles = {
+    backgroundColor: '#ff5055',
+    borderColor: '#ff5055',
+    transition: 'background-color 0.3s, border-color 0.3s',
+};
+
 export default function CtaFormPage() {
     const [formData, setFormData] = useState({
         name: '',
@@ -221,7 +227,21 @@ export default function CtaFormPage() {
                             ></textarea>
                         </div>
                         <div className="col-12 mt-3">
-                            <button type="submit" className="btn btn-primary w-100">Submit Application</button>
+                            <button
+                                type="submit"
+                                className="btn btn-primary w-100"
+                                style={buttonStyles}
+                                onMouseEnter={(e) => {
+                                    e.target.style.backgroundColor = '#4286b4';
+                                    e.target.style.borderColor = '#4286b4';
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.target.style.backgroundColor = buttonStyles.backgroundColor;
+                                    e.target.style.borderColor = buttonStyles.borderColor;
+                                }}
+                            >
+                                Submit Application
+                            </button>
                         </div>
                     </div>
                 </form>

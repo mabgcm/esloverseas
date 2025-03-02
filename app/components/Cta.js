@@ -1,6 +1,12 @@
 'use client';
 import React from 'react';
 
+const buttonStyles = {
+    backgroundColor: '#ff5055',
+    borderColor: '#ff5055',
+    transition: 'background-color 0.3s, border-color 0.3s',
+};
+
 const CTA = () => {
     return (
         <section className="py-5 bg-light">
@@ -18,6 +24,15 @@ const CTA = () => {
                         <a
                             href="/ctaform"
                             className="btn btn-primary btn-lg px-4 py-2 fw-semibold"
+                            style={buttonStyles}
+                            onMouseEnter={(e) => {
+                                e.target.style.backgroundColor = '#4286b4';
+                                e.target.style.borderColor = '#4286b4';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.backgroundColor = buttonStyles.backgroundColor;
+                                e.target.style.borderColor = buttonStyles.borderColor;
+                            }}
                         >
                             Start Your Journey
                         </a>

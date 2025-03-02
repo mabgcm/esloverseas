@@ -76,12 +76,12 @@
     font-size: 1.1rem;
     font-weight: 500;
     border-radius: 6px;
-    background-color: #1976d2;
+    background-color: #ff5055;
     /* Deep blue for a strong CTA */
     border: none;
     transition: background-color 0.2s ease;
 }
 
 .submitButton:hover {
-    background-color: #1565c0;
+    background-color: #4286b4;
 }
